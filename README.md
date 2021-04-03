@@ -92,8 +92,7 @@ kubectl apply -f ./manifest
 kubectl get ingress 
 ~~~~~~~~
 NAME                  CLASS    HOSTS               ADDRESS     PORTS   AGE
-sample-java-ingress  
- <none>   sample-java.local   localhost   80      2d21h
+sample-java-ingress   <none>   sample-java.local   localhost   80      2d21h
 ~~~~~~~~
 ```
 
@@ -110,3 +109,31 @@ Greetings from Spring Boot!
 ```
 
 # install argocd
+
+用下面的命令安装argocd
+```
+kubectl create namespace argocd
+kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
+kubectl apply -f ingress/argocd-ingress.yaml
+```
+https://argoproj.github.io/argo-cd/operator-manual/ingress/
+
+用以下命令修改的配置，在启动项后面添加--enable-ssl-passthrough
+```
+kubectl edit deployment ingress-nginx-controller -n ingress-nginx
+```
+
+在/etc/hosts里面添加以下内容
+```
+127.0.0.1	argocd.dev.com
+```
+重启浏览器，可以通过以下页面访问argocd的UI
+https://argocd.dev.com
+
+
+# 生成ssh key
+```
+ssh-keygen -t ed25519 -C "chenjl@servicememe.com"
+```
+
+
