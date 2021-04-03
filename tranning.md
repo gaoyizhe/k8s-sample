@@ -35,8 +35,11 @@ localhost/banana
 
 https://start.spring.io/
 
+```
 ./mvnw clean install
 ./mvnw spring-boot:run
+```
+访问以下端口可以获得响应。
 localhost:8080
 
 cd target
