@@ -63,9 +63,13 @@ drwxr-xr-x   3 jiliangchen  staff        96  4  3 10:27 test-classes
 # build docker image
 
 镜像仓库的概念（共有仓库，私有仓库）
+本次演示我们用docker hub这个公用仓库。
+请大家注册好docker hub的账号。
+下面执行docker login的时候需要账号和密码。
 
 ```
 docker build -t chenjlsmm/eks-java-cicd:0.0.1 .
+docker login
 docker push chenjlsmm/eks-java-cicd:0.0.1
 ```
 
