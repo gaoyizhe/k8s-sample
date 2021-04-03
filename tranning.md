@@ -64,8 +64,10 @@ drwxr-xr-x   3 jiliangchen  staff        96  4  3 10:27 test-classes
 
 镜像仓库的概念（共有仓库，私有仓库）
 
+```
 docker build -t chenjlsmm/eks-java-cicd:0.0.1 .
 docker push chenjlsmm/eks-java-cicd:0.0.1
+```
 
 # create manifest
 
