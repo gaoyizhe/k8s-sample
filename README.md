@@ -136,4 +136,15 @@ https://argocd.dev.com
 ssh-keygen -t ed25519 -C "chenjl@servicememe.com"
 ```
 
+将public key添加的github的信任的key里面。
+https://docs.github.com/ja/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account
+
+# 在argocd里面添加manifest的git仓库
+
+# 创建argocd project
+```
+kubectl apply -f argocd-pj/java-sample.yaml
+```
+创建完成以后可以在argocd的ui画面里面看到java-sample这个project
+
 
