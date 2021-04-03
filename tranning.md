@@ -3,9 +3,9 @@
 参照下面的网页安装 ingress-nginx
 https://kubernetes.github.io/ingress-nginx/deploy/#docker-for-mac
 
-'''
+```
 kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v0.44.0/deploy/static/provider/cloud/deploy.yaml
-'''
+```
 
 kubectl get pods -n ingress-nginx
 kubectl exec -it ingress-nginx-controller-7fc74cf778-rxrjg -n ingress-nginx -- /nginx-ingress-controller --version
