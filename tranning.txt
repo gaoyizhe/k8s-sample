@@ -1,0 +1,33 @@
+1 install ingress-nginx
+https://kubernetes.github.io/ingress-nginx/deploy/#docker-for-mac
+
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v0.44.0/deploy/static/provider/cloud/deploy.yaml
+
+kubectl get pods -n ingress-nginx
+kubectl exec -it ingress-nginx-controller-7fc74cf778-rxrjg -n ingress-nginx -- /nginx-ingress-controller --version
+
+2 sample
+kubectl apply -f apple.yaml
+kubectl apply -f banana.yaml
+kubectl apply -f ingress.yaml
+
+3 java project
+./mvnw clean install
+./mvnw spring-boot:run
+localhost:8080
+
+cd target
+ls -la
+
+4 build docker image
+
+docker build -t chenjlsmm/eks-java-cicd:0.0.1 .
+docker push chenjlsmm/eks-java-cicd:0.0.1
+
+5 create manifest
+
+6 deploy app to k8s
+kubectl apply -f ./manifest
+curl sample-java.local 
+
+7 install argocd
