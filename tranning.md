@@ -37,8 +37,10 @@ https://start.spring.io/
 
 ```
 ./mvnw clean install
-./mvnw spring-boot:run
+cd target
+java -jar demo-0.0.1-SNAPSHOT.jar
 ```
+
 访问以下端口可以获得响应。
 localhost:8080
 
