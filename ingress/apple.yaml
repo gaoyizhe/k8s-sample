@@ -10,7 +10,6 @@ spec:
       image: hashicorp/http-echo
       args:
         - "-text=apple"
-
 ---
 
 kind: Service
