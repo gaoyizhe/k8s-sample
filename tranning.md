@@ -35,18 +35,16 @@ localhost/banana
 
 https://start.spring.io/
 
+用以下命令build java项目
 ```
 ./mvnw clean install
-cd target
-java -jar demo-0.0.1-SNAPSHOT.jar
 ```
-
-访问以下端口可以获得响应。
-localhost:8080
+我们用以下命令来查看build出来的jar
 
 ```
 cd target
 ls -la
+-----------
 drwxr-xr-x  11 jiliangchen  staff       352  4  3 10:27 .
 drwxr-xr-x  15 jiliangchen  staff       480  4  3 10:27 ..
 drwxr-xr-x   4 jiliangchen  staff       128  4  3 10:27 classes
@@ -56,16 +54,31 @@ drwxr-xr-x   3 jiliangchen  staff        96  4  3 10:27 generated-sources
 drwxr-xr-x   3 jiliangchen  staff        96  4  3 10:27 generated-test-sources
 drwxr-xr-x   3 jiliangchen  staff        96  4  3 10:27 maven-archiver
 drwxr-xr-x   3 jiliangchen  staff        96  4  3 10:27 maven-status
-drwxr-xr-x   4 jiliangchen  staff       128  4  3 10:27 surefire-reports
-drwxr-xr-x   3 jiliangchen  staff        96  4  3 10:27 test-classes
+---------
 ```
+我们可以看到生成了demo-0.0.1-SNAPSHOT.jar这个文件。
+
+用以下命令来启动java应用
+```
+java -jar demo-0.0.1-SNAPSHOT.jar
+```
+
+
+访问以下端口可以获得响应。
+localhost:8080
 
 # build docker image
 
 镜像仓库的概念（共有仓库，私有仓库）
+本次演示我们用docker hub这个公用仓库。
+请大家注册好docker hub的账号。
+下面执行docker login的时候需要账号和密码。
 
+```
 docker build -t chenjlsmm/eks-java-cicd:0.0.1 .
+docker login
 docker push chenjlsmm/eks-java-cicd:0.0.1
+```
 
 # create manifest
 
