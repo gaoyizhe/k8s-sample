@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: sample-java
-        image: chenjlsmm/java-demo:GITHUB_SHA
+        image: chenjlsmm/java-demo:v0.0.2
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
