@@ -44,8 +44,21 @@ java -jar demo-0.0.1-SNAPSHOT.jar
 访问以下端口可以获得响应。
 localhost:8080
 
+```
 cd target
 ls -la
+drwxr-xr-x  11 jiliangchen  staff       352  4  3 10:27 .
+drwxr-xr-x  15 jiliangchen  staff       480  4  3 10:27 ..
+drwxr-xr-x   4 jiliangchen  staff       128  4  3 10:27 classes
+-rw-r--r--   1 jiliangchen  staff  17064438  4  3 10:27 demo-0.0.1-SNAPSHOT.jar
+-rw-r--r--   1 jiliangchen  staff      3173  4  3 10:27 demo-0.0.1-SNAPSHOT.jar.original
+drwxr-xr-x   3 jiliangchen  staff        96  4  3 10:27 generated-sources
+drwxr-xr-x   3 jiliangchen  staff        96  4  3 10:27 generated-test-sources
+drwxr-xr-x   3 jiliangchen  staff        96  4  3 10:27 maven-archiver
+drwxr-xr-x   3 jiliangchen  staff        96  4  3 10:27 maven-status
+drwxr-xr-x   4 jiliangchen  staff       128  4  3 10:27 surefire-reports
+drwxr-xr-x   3 jiliangchen  staff        96  4  3 10:27 test-classes
+```
 
 # build docker image
 
