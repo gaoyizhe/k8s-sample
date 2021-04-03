@@ -82,8 +82,31 @@ docker push chenjlsmm/eks-java-cicd:0.0.1
 
 # create manifest
 
+我们创建用于发布应用的manifest。具体内容请参照manifest文件夹
+
 # deploy app to k8s
+
+用下面的命令将应用发布于k8s集群
+```
 kubectl apply -f ./manifest
+kubectl get ingress 
+~~~~~~~~
+NAME                  CLASS    HOSTS               ADDRESS     PORTS   AGE
+sample-java-ingress  
+ <none>   sample-java.local   localhost   80      2d21h
+~~~~~~~~
+```
+
+由于我们是在本机进行模拟，请在/etc/hosts里面添加类似内容
+```
+127.0.0.1	sample-java.local
+```
+我们在命令行用以下命令来访问服务
+
+```
 curl sample-java.local 
+～～～～
+Greetings from Spring Boot!
+```
 
 # install argocd
