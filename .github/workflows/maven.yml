@@ -43,6 +43,7 @@ jobs:
       run: |
         echo "-------"
         echo "GITHUB_SHA:$GITHUB_SHA"
+        sed --version
         ls -la
         cat ./manifest-template/deployment.yaml
         cat ./manifest/deployment.yaml
