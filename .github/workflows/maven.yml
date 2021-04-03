@@ -41,6 +41,11 @@ jobs:
       uses: actions/checkout@v2
     - name: Genereate deplotment file
       run: |
+        echo "-------"
+        echo "GITHUB_SHA:$GITHUB_SHA"
+        ls -la
+        cat ./manifest-template/deployment.yaml
+        cat ./manifest/deployment.yaml
         sed "s/GITHUB_SHA/$GITHUB_SHA/g" ./manifest-template/deployment.yaml > ./manifest/deployment.yaml
         cat ./manifest/deployment.yaml|grep $GITHUB_SHA
         
