@@ -30,6 +30,10 @@ localhost/apple
 localhost/banana
 
 # 初始化一个java project
+需要大家提前在开发的机器上安装jdk11。
+通过下面的页面初始化一个spring boot的项目。
+
+https://start.spring.io/
 
 ./mvnw clean install
 ./mvnw spring-boot:run
