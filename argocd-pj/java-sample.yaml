@@ -6,9 +6,13 @@ metadata:
   finalizers:
   - resources-finalizer.argocd.argoproj.io
 spec:
+  syncPolicy:
+    automated:
+      prune: true
+      allowEmpty: true
   destination:
     namespace: default
-    server: kubernetes.default.svc
+    server: https://kubernetes.default.svc
   project: default
   source:
     path: manifest
