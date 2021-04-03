@@ -35,11 +35,34 @@ localhost/banana
 
 https://start.spring.io/
 
+用以下命令build java项目
 ```
 ./mvnw clean install
+```
+我们用以下命令来查看build出来的jar
+
+```
 cd target
+ls -la
+-----------
+drwxr-xr-x  11 jiliangchen  staff       352  4  3 10:27 .
+drwxr-xr-x  15 jiliangchen  staff       480  4  3 10:27 ..
+drwxr-xr-x   4 jiliangchen  staff       128  4  3 10:27 classes
+-rw-r--r--   1 jiliangchen  staff  17064438  4  3 10:27 demo-0.0.1-SNAPSHOT.jar
+-rw-r--r--   1 jiliangchen  staff      3173  4  3 10:27 demo-0.0.1-SNAPSHOT.jar.original
+drwxr-xr-x   3 jiliangchen  staff        96  4  3 10:27 generated-sources
+drwxr-xr-x   3 jiliangchen  staff        96  4  3 10:27 generated-test-sources
+drwxr-xr-x   3 jiliangchen  staff        96  4  3 10:27 maven-archiver
+drwxr-xr-x   3 jiliangchen  staff        96  4  3 10:27 maven-status
+---------
+```
+我们可以看到生成了demo-0.0.1-SNAPSHOT.jar这个文件。
+
+用以下命令来启动java应用
+```
 java -jar demo-0.0.1-SNAPSHOT.jar
 ```
+
 
 访问以下端口可以获得响应。
 localhost:8080
