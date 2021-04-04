@@ -147,4 +147,6 @@ kubectl apply -f argocd-pj/java-sample.yaml
 ```
 创建完成以后可以在argocd的ui画面里面看到java-sample这个project
 
+test cicd
+
 
